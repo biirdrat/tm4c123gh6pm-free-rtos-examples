@@ -35,7 +35,6 @@ void ResetISR(void);
 static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
-extern void UART1IntHandler(void);
 
 //*****************************************************************************
 //
@@ -60,6 +59,7 @@ extern uint32_t __STACK_TOP;
 extern void xPortPendSVHandler(void);
 extern void vPortSVCHandler(void);
 extern void xPortSysTickHandler(void);
+extern void UART1IntHandler(void);
 
 //*****************************************************************************
 //
