@@ -111,9 +111,9 @@ void initializeUART1Bluetooth()
 
 void UART1IntHandler(void)
 {
-	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	UARTIntClear(UART1_BASE, UARTIntStatus(UART1_BASE, true));
 
-    UARTIntClear(UART1_BASE, UARTIntStatus(UART1_BASE, true));
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
     if(UARTCharsAvail(UART1_BASE))
     {
