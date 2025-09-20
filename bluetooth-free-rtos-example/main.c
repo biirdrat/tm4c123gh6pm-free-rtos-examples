@@ -174,7 +174,7 @@ int main(void)
     xTask2Semaphore = xSemaphoreCreateBinary();
 
     xTaskCreate(vTask1, "Task 1", 256, NULL, 10, NULL);
-    xTaskCreate(vTask2, "Task 21", 256, NULL, 10, NULL);
+    xTaskCreate(vTask2, "Task 2", 256, NULL, 10, NULL);
 
     vTaskStartScheduler();
 
